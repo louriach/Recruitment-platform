@@ -1,0 +1,79 @@
+{
+    "questions": [
+        {
+            "category": "Working Environment Preferences",
+            "question": "Preference for Pace",
+            "description": "I prefer working in a fast-paced environment where tasks and projects often need to be completed quickly."
+        },
+        {
+            "category": "Working Environment Preferences",
+            "question": "Collaboration Style",
+            "description": "I enjoy frequent collaboration with team members over working independently."
+        },
+        {
+            "category": "Working Environment Preferences",
+            "question": "Feedback Culture",
+            "description": "Receiving regular feedback from peers and managers is important to me."
+        },
+        {
+            "category": "Working Environment Preferences",
+            "question": "Adaptability",
+            "description": "I am comfortable adapting to changes in tasks, priorities, or project directions."
+        },
+        {
+            "category": "Working Environment Preferences",
+            "question": "Innovation",
+            "description": "I highly value the opportunity to contribute new ideas and innovative solutions in my work environment."
+        },
+        {
+            "category": "Assessing Tool Proficiency",
+            "question": "Preferred Design Tool Usage",
+            "description": "I prefer flexibly using multiple design tools based on the project's requirements."
+        },
+        {
+            "category": "Assessing Tool Proficiency",
+            "question": "Mastery Approach",
+            "description": "I excel in navigating design software efficiently and prefer mastering one tool at a time."
+        },
+        {
+            "category": "Embracing Design Principles",
+            "question": "Design Patterns Familiarity",
+            "description": "I enjoy studying design patterns and standards to enhance my own design solutions."
+        },
+        {
+            "category": "Embracing Design Principles",
+            "question": "Preference for Design Standards",
+            "description": "I am inclined towards incorporating recognized design principles and standards into my work."
+        },
+        {
+            "category": "Crafting a Personal Point of View",
+            "question": "Formation of Opinions",
+            "description": "I find satisfaction in formulating my own opinions and perspectives on design challenges."
+        },
+        {
+            "category": "Crafting a Personal Point of View",
+            "question": "Defending Design Solutions",
+            "description": "I am comfortable presenting and defending my design solutions, showcasing my unique point of view."
+        },
+        {
+            "category": "Conveying a Conceptual Story",
+            "question": "Narrative Sustainment",
+            "description": "I find fulfillment in sustaining a cohesive design narrative throughout the entire design process."
+        },
+        {
+            "category": "Conveying a Conceptual Story",
+            "question": "Effective Communication",
+            "description": "I excel in effectively communicating design concepts to various stakeholders and team members."
+        },
+        {
+            "category": "Mastering Collaboration Skills",
+            "question": "Collaboration Enjoyment",
+            "description": "I enjoy collaborating with cross-functional teams and departments to drive design excellence."
+        },
+        {
+            "category": "Mastering Collaboration Skills",
+            "question": "Adaptable Collaboration Style",
+            "description": "I am skilled at adapting my collaboration style to suit different team dynamics and project requirements."
+        }
+    ]
+}
