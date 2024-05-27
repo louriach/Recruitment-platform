@@ -122,7 +122,7 @@ body {
     align-items: center;
     border-top: 2px solid rgba(255,255,255,.24);
     display: flex;
-    margin-top: 1rem;
+    margin-top: 2rem;
     padding-top: 24px;
   }
   .profile p {
@@ -190,7 +190,27 @@ body {
         <p>Imagine being told that a company fits your profile, rather than hoping that you pass an algorithmic system's judgement.</p>
 
         <p>If you'd like to be updated on our progress, drop your email address into the form below. If you'd like to fund this venture, you know where to find me.</p>
-        <iframe src="https://recruitingplatform.substack.com/embed" width="100%"" frameborder="0" scrolling="no"></iframe>
+        <div id="custom-substack-embed"></div>
+
+
+<script>
+  window.CustomSubstackWidget = {
+    substackUrl: "recruitingplatform.substack.com",
+    placeholder: "example@gmail.com",
+    buttonText: "Subscribe",
+    theme: "custom",
+    colors: {
+      primary: "#FFFFFF",
+      input: "#000000",
+      email: "#FFFFFF",
+      text: "#000000",
+    },
+
+    // Go to substackapi.com to unlock custom redirect
+
+  };
+</script>
+<script src="https://substackapi.com/widget.js" async></script>
 
         <div class="profile">
             <img src="luis-ouriach.jpeg" alt="Headshow picture of Luis" class="avatar"/>
