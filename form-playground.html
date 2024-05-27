@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Questionnaire</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div id="questions"></div>
+
+  <script>
+    // URL of the external JSON file
+    const jsonUrl = 'questions.json';
+
+    // Get question list element
+    const questionList = document.getElementById("questions");
+
+    // Fetch JSON data
+    fetch(jsonUrl)
+      .then(response => response.json())
+      .then(data => {
+        // Generate HTML sections
+        data.questions.forEach(question => {
+            const entry = document.createElement("article");
+            entry.classList.add("question");
+            const title = document.createElement("h1");
+            const content = document.createElement("p");
+
+            title.textContent = question.question;
+            content.textContent = question.description;
+
+            // Create radio buttons for the 5-point scale
+            const radioDiv = document.createElement("div");
+            radioDiv.classList.add("radios");
+            const labels = ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"];
+            for (let i = 1; i <= 5; i++) {
+                const radioInput = document.createElement("input");
+                radioInput.type = "radio";
+                radioInput.name = question.question;
+                radioInput.value = i;
+                radioInput.id = question.question + "_" + i; // Unique id for each radio button
+
+                // Preselect the "Neutral" radio button
+                if (i === 3) {
+                    radioInput.checked = true;
+                }
+
+                const label = document.createElement("label");
+                label.textContent = labels[i - 1];
+                label.setAttribute("for", question.question + "_" + i); // Associate label with radio button
+
+                const radioLabelDiv = document.createElement("div");
+                radioLabelDiv.classList.add("radio-group");
+                radioLabelDiv.appendChild(radioInput);
+                radioLabelDiv.appendChild(label);
+                radioDiv.appendChild(radioLabelDiv);
+
+                // Add event listener to radio-group div
+                radioLabelDiv.addEventListener("click", () => {
+                    radioInput.click();
+                });
+            }
+
+            entry.appendChild(title);
+            entry.appendChild(content);
+            entry.appendChild(radioDiv);
+
+            questionList.appendChild(entry);
+        });
+      })
+      .catch(error => {
+        console.error('Error fetching JSON:', error);
+      });
+</script>
+
+</body>
+</html>

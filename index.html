@@ -3,76 +3,183 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Questionnaire</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Recruitment is broken</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+em {
+    font-style: italic;
+}
+strong {
+    font-weight: 700;
+}
+
+body {
+    background-color: #252d32;
+    background-image: url(bg-pattern.svg);
+    background-repeat: repeat;
+    color: rgba(255, 255, 255, 0.9);
+    font-family: "Libre Baskerville", serif;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+  section {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255,255,255,.1);
+    /* color: rgba(255,255,255,.9); */
+    margin: 48px;
+    max-width: 480px;
+    padding: 72px;
+    width: 90%;
+  }
+
+  h1, h2 {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1;
+  }
+  h1 {
+    font-size: 6rem;
+    margin-bottom: 4rem;
+    background: #fcb44b;
+    color: #252d32;
+    padding: 24px;
+  }
+  h2 {
+    font-size: 3rem;
+    margin: 2rem 0 1rem;
+  }
+  h1 span {
+    font-size: 8rem;
+    text-transform: uppercase;
+  }
+  p {
+    margin-bottom: 2rem;
+  }
+  p:last-child {
+    margin: 0   ;
+  }
+  a {
+    border-bottom: 2px solid rgba(255,255,255,.9);
+    color: white;
+    padding-bottom: 1px;
+    text-decoration: none;
+    transition: border-width 0.1s linear;
+  }
+  a:hover {
+    border-width: 0px;
+  }
+  .profile {
+    align-items: center;
+    border-top: 2px solid rgba(255,255,255,.24);
+    display: flex;
+    padding-top: 24px;
+  }
+  .profile p {
+    margin: 0;
+  }
+  .avatar {
+    border-radius: 100%;
+    height: 80px;
+    margin-right: 1rem;
+    width: 80px;
+  }
+
+  @media all and (min-width: 480px) {
+    body {
+        font-size: 24px;
+    }
+  }
+
+  </style>
 </head>
 <body>
-  <div id="questions"></div>
+    <section>
+        <h1>Hiring is <span>broken</span></h1>
+        <h2>Job boards</h2>
+        <p>The hiring market is fundamentally broken, riddled with inefficiencies and systemic flaws that hinder both employers and job seekers.</p>
+        <p>Central to this dysfunction is the reliance on outdated job boards, which are ineffective for most candidates.</p>
+        <p>These platforms inundate applicants with generic job descriptions and overwhelm hiring managers with floods of resumes.</p>
+        
+        <p>Talented designers are not given a fair shot at a career they deserve.</p>
 
-  <script>
-    // URL of the external JSON file
-    const jsonUrl = 'questions.json';
+        <h2>Progression</h2>
+        <p>Career progression is another significant issue. Many organizations fail to provide clear pathways for advancement, leaving employees stagnant and disengaged.</p>
+        <p>This lack of development opportunities not only demotivates designers but stunts innovation and growth within companies.</p>
+        <p>Talented individuals are often forced to seek new positions elsewhere, perpetuating a cycle of turnover and instability.</p>
+        
+        <h2>Referrals</h2>
+        <p>The industry's heavy dependence on referrals exacerbates these problems, creating an uneven playing field. While networking can open doors, it also reinforces biases and limits diversity. Those without access to influential networks face significant disadvantages, regardless of their qualifications or potential. This gatekeeping mechanism perpetuates inequality, as opportunities are often reserved for those within certain social circles.</p>
+        
+        <p>To address these issues, we must innovate hiring practices, emphasize transparent career growth, and develop fairer systems that value merit over connections. Only then can we create a more efficient, equitable job market for all.</p>
 
-    // Get question list element
-    const questionList = document.getElementById("questions");
+        <h2>Change</h2>
+        <p>We want to try and fix this.</p>
 
-    // Fetch JSON data
-    fetch(jsonUrl)
-      .then(response => response.json())
-      .then(data => {
-        // Generate HTML sections
-        data.questions.forEach(question => {
-            const entry = document.createElement("article");
-            entry.classList.add("question");
-            const title = document.createElement("h1");
-            const content = document.createElement("p");
+        <p>We're not 100% sure how yet, but believe that the CV is in need of reinvention. Maybe they are the problem?</p>
 
-            title.textContent = question.question;
-            content.textContent = question.description;
+        <p>We have a working theory that <em>job matching</em> is the future. Bye bye to blind applications.</p>
+        <p>Imagine being told that a company fits your profile, rather than hoping that you pass an algorithmic system's judgement.</p>
 
-            // Create radio buttons for the 5-point scale
-            const radioDiv = document.createElement("div");
-            radioDiv.classList.add("radios");
-            const labels = ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"];
-            for (let i = 1; i <= 5; i++) {
-                const radioInput = document.createElement("input");
-                radioInput.type = "radio";
-                radioInput.name = question.question;
-                radioInput.value = i;
-                radioInput.id = question.question + "_" + i; // Unique id for each radio button
+        <p>If you'd like to be updated on our progress, drop your email address into the form below. If you'd like to fund this venture, you know where to find me.</p>
 
-                // Preselect the "Neutral" radio button
-                if (i === 3) {
-                    radioInput.checked = true;
-                }
-
-                const label = document.createElement("label");
-                label.textContent = labels[i - 1];
-                label.setAttribute("for", question.question + "_" + i); // Associate label with radio button
-
-                const radioLabelDiv = document.createElement("div");
-                radioLabelDiv.classList.add("radio-group");
-                radioLabelDiv.appendChild(radioInput);
-                radioLabelDiv.appendChild(label);
-                radioDiv.appendChild(radioLabelDiv);
-
-                // Add event listener to radio-group div
-                radioLabelDiv.addEventListener("click", () => {
-                    radioInput.click();
-                });
-            }
-
-            entry.appendChild(title);
-            entry.appendChild(content);
-            entry.appendChild(radioDiv);
-
-            questionList.appendChild(entry);
-        });
-      })
-      .catch(error => {
-        console.error('Error fetching JSON:', error);
-      });
-</script>
-
+        <div class="profile">
+            <img src="luis-ouriach.jpeg" alt="Headshow picture of Luis" class="avatar"/>
+            <div>
+                <p>Luis Ouriach</p>
+                <a href="https://twitter.com/disco_lu">@disco_lu</a>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
